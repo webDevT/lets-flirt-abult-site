@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>LatinoHeartMatch</title>
+	<meta name="description" content="LatinoHeartMatch">
+<meta name="keywords" content="LatinoHeartMatch">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="get-vip">
+<!-- -----------start header------------ -->
+<div class="header">
+	<div class="container">
+		<div class="logo">
+			<a href="index.html">
+		
+				<h1>LatinoHeartMatch</h1>
+
+			</a>
+		</div>
+	</div>
+
+</div>
+<!-- -------------end header------------- -->
+
+<!-- --------------start content----------- -->
+<div class="content wrapper">
+	<div class="container">
+		
+		<div class="content__header" style="padding-bottom: 0;">
+			<div class="content__header-text" style="
+text-align: center;
+width: 100%;
+font-size: 18px;
+line-height: 24px;
+padding-bottom: 0;
+">
+				<b><span class="title-text">
+					Special offer! Hurry while discounts last!
+					</span> 
+					</b>
+			</div>
+		</div>
+
+		<div class="content__header" style="padding-top: 0;">
+			<div class="content__header-text">
+				👑 <span>VIP STATUS</span>
+			</div>
+		</div>
+		
+
+		<div class="items-list rate" style="padding-bottom: 50px;">
+
+			
+
+			<div class="item item--green active" plan="4">
+				<div class="item__content">
+					<div class="item__price">
+						4.99 €/mth.
+					</div>
+					<div class="item__content-footer">
+						<div class="old-price">
+							9.99€
+						</div>
+						<div class="term">
+							12 months
+						</div>
+					</div>
+					<div class="action best-price">best price</div>
+				</div>
+				<!-- <div class="item__footer">
+					Total Price: 49.99 €
+				</div> -->
+			</div>
+
+			
+			<div class="item" plan="3">
+				<div class="item__content">
+					<div class="item__price">
+						5 €/mth.
+					</div>
+					<div class="item__content-footer">
+						<div class="old-price">
+							9.99 €
+						</div>
+						<div class="term">
+							6 months
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="item__footer">
+					Total price: 29.99 €
+				</div> -->
+			</div>
+			
+
+			
+			<div class="item" plan="1">
+				<div class="item__content ">
+					<div class="item__price">
+					   9.99 €/mth.
+					</div>
+					<div class="item__content-footer">
+						<div class="old-price">
+							15 €
+						</div>
+						<div class="term">
+							1 months
+						</div>
+					</div>
+
+				</div>
+				<!-- <div class="item__footer">
+					Total price: 9.99 €
+				</div> -->
+			</div>
+			
+		</div>
+
+		<div class="next-button-wrapper">
+			<form action="https://flirtu.io/buy-vip/28495288511652383/" method="POST" id="plan-select-form">
+				<input type="hidden" name="csrfmiddlewaretoken" value="lLyUljtt8l0ENTvsRGY4m2nl5AyQQfKXtlIqzxa85RMAuCFqx1x5dnBkXCPuPlLY">
+				<input type="hidden" name="plan" value="4">
+				<noscript>
+					<div class="button">
+					<a href="payment-completed.html"><button>👉 CONTINUE 👈</button></a>
+					</div>
+				</noscript>
+			</form>
+
+		<div class="button">
+			<a href="payment-completed.html" onclick="$(&#39;#plan-select-form&#39;).submit();"><b>👉 CONTINUE 👈</b></a>
+		</div>
+			<!-- <div class="item__footer" style="text-align: center;">
+				By proceeding with the deposit you accept the
+				<a style="color: #adb0b6;font-weight: 600;" target="_blank" href="https://flirtu.io/ru/agreement/?rtkclickid=6586acbfb9fdc10001479e48">terms and conditions</a>.
+				Flirtu SIA, 5 Vizmas Belsevicas str., Riga, LV1082, Latvia.
+			</div> -->
+		</div>
+
+	</div>
+</div>
+<!-- -----------end content----------- -->
+	</div>
+ 
+
+	<script src="js/main.js"></script>
+
+	<script>
+const items = document.querySelectorAll('.item');
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    items.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+
+	</script>
+</body>
+</html>
