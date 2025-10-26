@@ -1632,7 +1632,7 @@ h3 {
             flex-direction: column;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    padding-bottom: 75px;
+    padding-bottom: 40px;
   }
   .main-screen__content {
     display: -webkit-box;
