@@ -39,6 +39,7 @@ body {
   width: 6.4vw;
   margin-right: 1vw;
   display: inline-block;
+  height: auto;
 }
 
 h1 {
@@ -168,6 +169,7 @@ p {
       -ms-transform: translateX(-5%);
           transform: translateX(-5%);
   margin-top: 8vw;
+  height: auto;
 }
 
 .items-section {
@@ -325,7 +327,10 @@ p {
 
 .cta__icon {
   width: 27.467vw;
-  margin-top: -25vw;
+  margin-top: -20vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
 }
 
 .cta__content {
