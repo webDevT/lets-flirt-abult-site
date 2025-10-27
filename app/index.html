@@ -36,8 +36,14 @@
 			contain: layout style paint;
 		}
 		
+		/* Font loading optimization - prevent layout shift */
+		* {
+			font-display: swap;
+		}
+		
 		/* Header styles */
 		.header { 
+
 			/* Optimize for performance */
 			will-change: auto;
 		}
@@ -47,7 +53,69 @@
 			/* Prevent reflow */
 			transform: translateZ(0);
 		}
-
+		
+		/* Main screen - prevent layout shift */
+		.main-screen {
+		
+			/* Prevent layout shift */
+			contain: layout;
+		}
+		.main-screen__content {
+			width: 100%;
+		}
+		.main-screen__photo-wrapper {
+			flex: 1;
+		}
+		.photo-hero__image {
+			width: 400px;
+			height: 600px;
+			border-radius: 20px;
+			display: block;
+		}
+		.main-screen__text-content {
+			flex: 1;
+			color: white;
+			min-height: 400px;
+		}
+		.h1 {
+			font-size: 2.5rem;
+			margin: 20px 0;
+			line-height: 1.2;
+		}
+		.main-screen__title {
+			font-size: 3rem;
+			font-weight: bold;
+			margin: 20px 0;
+			line-height: 1.1;
+		}
+		.main-screen__text {
+			font-size: 1.2rem;
+			margin: 20px 0;
+			line-height: 1.4;
+		}
+		
+	
+		
+		/* Optimize images to prevent reflow */
+		img {
+			/* Use GPU acceleration */
+			transform: translateZ(0);
+			/* Prevent layout shift */
+			display: block;
+		}
+		
+		/* Optimize containers */
+		.container {
+			/* Use contain property for better performance */
+			contain: layout;
+		}
+		
+		/* Optimize buttons and interactive elements */
+		.button {
+			/* Prevent reflow on hover */
+			transform: translateZ(0);
+			will-change: transform;
+		}
 		
 	</style>
 	
@@ -102,7 +170,7 @@
 							Continue on Telegram
 	
 							<div class="button__icon">
-								<img src="https://d224c2dcr8pvve.cloudfront.net/static/latinoheart/img/tg.svg" alt="telegram icon" loading="lazy">
+								<img src="https://d224c2dcr8pvve.cloudfront.net/static/latinoheart/img/tg.svg" alt="telegram icon" loading="lazy" width="24" height="24">
 								<div class="button__icon-num">2</div>
 							</div>
 						</a>
@@ -277,7 +345,7 @@
 					Continue on Telegram
 
 					<div class="button__icon">
-						<img src="img/tg.svg" alt="telegram icon" loading="lazy">
+						<img src="img/tg.svg" alt="telegram icon" loading="lazy" width="24" height="24">
 						<div class="button__icon-num">2</div>
 					</div>
 				</a>
@@ -304,7 +372,7 @@
 
 						<div class="review__header">
 							<div class="avatar">
-							<img src="img/r1.svg" alt="James">
+							<img src="img/r1.svg" alt="James" width="50" height="50">
 						</div>
 
 						<div class="rev-wrap">
@@ -318,7 +386,7 @@
 	
 						</div>
 	
-						<img src="img/stars.svg" alt="stars" loading="lazy" class="stars-img">
+						<img src="img/stars.svg" alt="stars" loading="lazy" class="stars-img" width="100" height="20">
 						</div>
 	
 						
@@ -338,7 +406,7 @@
 
 						<div class="review__header">
 							<div class="avatar">
-							<img src="img/r2.svg" alt="James">
+							<img src="img/r2.svg" alt="James" width="50" height="50">
 						</div>
 
 						<div class="rev-wrap">
@@ -352,7 +420,7 @@
 	
 						</div>
 	
-						<img src="img/stars.svg" alt="stars" loading="lazy" class="stars-img">
+						<img src="img/stars.svg" alt="stars" loading="lazy" class="stars-img" width="100" height="20">
 						</div>
 	
 						
@@ -371,7 +439,7 @@
 
 						<div class="review__header">
 							<div class="avatar">
-							<img src="img/r3.svg" alt="James">
+							<img src="img/r3.svg" alt="James" width="50" height="50">
 						</div>
 
 						<div class="rev-wrap">
@@ -385,7 +453,7 @@
 	
 						</div>
 	
-						<img src="img/stars.svg" alt="stars" loading="lazy" class="stars-img">
+						<img src="img/stars.svg" alt="stars" loading="lazy" class="stars-img" width="100" height="20">
 						</div>
 	
 						
@@ -448,8 +516,8 @@
 					<div>Continue on Telegram</div>
 	
 					<div class="button__icon">
-						<img src="img/tg-white.svg" alt="telegram icon" loading="lazy">
-						<img src="img/tg.svg" alt="telegram icon" loading="lazy" class="tg-blue">
+						<img src="img/tg-white.svg" alt="telegram icon" loading="lazy" width="24" height="24">
+						<img src="img/tg.svg" alt="telegram icon" loading="lazy" class="tg-blue" width="24" height="24">
 						<div class="button__icon-num">2</div>
 					</div>
 				</a>

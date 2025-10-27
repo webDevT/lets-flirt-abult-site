@@ -38,6 +38,7 @@ body {
 .h1 img {
   width: 6.4vw;
   margin-right: 1vw;
+  display: inline-block;
 }
 
 h1 {
@@ -183,6 +184,8 @@ p {
 
 .item__icon {
   width: 18.667vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .item {
@@ -266,6 +269,7 @@ p {
 
 .benefits__item-image {
   width: 34vw;
+  height: auto;
   margin-bottom: 4.267vw;
   display: block;
   margin-left: auto;
