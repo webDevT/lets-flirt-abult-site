@@ -1448,6 +1448,7 @@ h3 {
 
 .photo-hero__image {
   width: 85.87vw;
+  height: auto;
 }
 
 .text-image-section {
