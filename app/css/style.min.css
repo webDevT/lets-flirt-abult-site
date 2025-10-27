@@ -485,7 +485,7 @@ p {
   left: 0;
   width: 100%;
   padding-bottom: 2vw;
-  z-index: 99;
+  z-index: 999;
 }
 .fixed-button-wrapper .button {
   width: 100%;
@@ -1577,6 +1577,33 @@ h3 {
   width: 12.533vw;
 }
 
+.fixed-button-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 2vw;
+  z-index: 99;
+}
+.fixed-button-wrapper .button {
+  width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+  .fixed-button-wrapper {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: transparent;
+    padding: 15px 0;
+  }
+  .fixed-button-wrapper .button {
+    max-width: none;
+  }
+}
 /* div.hero-container */
 @media only screen and (min-width: 992px) {
   .header {
@@ -1643,7 +1670,7 @@ h3 {
             flex-direction: column;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    padding-bottom: 40px;
+    padding-bottom: 40gupx;
   }
   .main-screen__content {
     display: -webkit-box;
@@ -2074,6 +2101,52 @@ h3 {
     text-align: center;
   }
   .footer {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
+  }
+  .fixed-button-wrapper {
+    display: block;
+  }
+  .fixed-button-wrapper .container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 7px 9px 7px 34px;
+    width: 493px;
+    max-width: 100%;
+    background: #1E050B;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    -webkit-box-shadow: 0px 0px 10px rgba(223, 83, 51, 0.43), -10px -5px 93.2px rgba(255, 170, 130, 0.37);
+    box-shadow: 0px 0px 10px rgba(223, 83, 51, 0.43), -10px -5px 93.2px rgba(255, 170, 130, 0.37);
+  }
+  .fixed-button-wrapper .container .button {
+    width: 292px;
+    height: 51px;
+    margin-right: 0;
+    margin-left: 0;
+    background: #fff;
+    color: #29a0dc;
+  }
+  .fixed-button-wrapper .container .button__icon {
+    top: 0;
+  }
+  .fixed-title {
+    display: block;
+  }
+  .fixed-button-wrapper img {
+    display: none;
+  }
+  .fixed-button-wrapper .tg-blue {
+    display: block;
   }
 }

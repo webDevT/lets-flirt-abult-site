@@ -402,10 +402,11 @@ p
   left: 0
   width: 100%
   padding-bottom: 2vw
-  z-index: 99
+  z-index: 999
 
   .button
     width: 100%
+
 
 .get-vip
   .header
@@ -1372,5 +1373,29 @@ h3
     margin-right: 3.733vw
     img 
         width: 12.533vw
+.fixed-button-wrapper
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  padding-bottom: 2vw
+  z-index: 99
+  .button
+    width: 100%
+// Mobile-specific styles for fixed button
+@media only screen and (max-width: 991px)
+  .fixed-button-wrapper
+    display: block 
+    position: fixed 
+    bottom: 0 
+    left: 0 
+    width: 100% 
+    z-index: 999 
+    background: transparent
+    padding: 15px 0    
+    .button
+
+      max-width: none
+
 @import "media"
 
