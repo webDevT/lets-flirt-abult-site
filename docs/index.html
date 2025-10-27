@@ -15,11 +15,26 @@
 <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/ibmplexsans/v16/IBMPlexSans-Regular.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/mulish/v12/Mulish-Regular.woff2" crossorigin>
 
-<!-- Main Google Fonts CSS -->
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<!-- Main Google Fonts CSS - Load asynchronously -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</noscript>
 
 
-	<link rel="stylesheet" href="css/style.min.css">
+	<!-- Critical CSS inline for above-the-fold content -->
+	<style>
+		/* Critical styles for LCP and above-the-fold content */
+		body { margin: 0; font-family: 'IBM Plex Sans', sans-serif; }
+	</style>
+	
+	<!-- Load full CSS asynchronously -->
+	<link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/style.min.css">
+	</noscript>
+	<!-- Preload critical LCP image -->
+	<link rel="preload" as="image" href="img/photo-hero.webp" />
 	<link rel="preload" as="image" href="img/photo1.png" />
 	<link rel="preload" as="image" href="img/photo2.png" />
 </head>
@@ -29,14 +44,14 @@
 			<div class="container">
 				<div class="logo">
 					<a href="/">
-						<img src="img/logo.svg" alt="logo" loading="lazy">
+						<img src="img/logo.svg" alt="logo">
 					</a>
 				</div>
 
 				<h1 class="h1">
 
 					<span>
-						<img src="img/telegram.svg" alt="" loading="lazy">Telegram 
+						<img src="img/telegram.svg" alt="">Telegram 
 					</span>
 				
 					Presents Adult Dating
@@ -55,7 +70,7 @@
 				<div class="main-screen__content">
 
 					<div class="main-screen__photo-wrapper">
-						<img src="img/photo-hero.webp" alt="photo" loading="lazy" class="photo-hero__image">
+						<img src="img/photo-hero.webp" alt="photo" fetchpriority="high" class="photo-hero__image">
 					</div>
 
 					<div class="main-screen__text-content">
